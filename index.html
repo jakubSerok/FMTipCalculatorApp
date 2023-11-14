@@ -8,37 +8,60 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <img src="./images/logo.svg" alt="logo" class="logo-img">
+  <div class="container">
+    <div class="leftSide">
+      <div class="billBox">
+        <p>Bill</p>
+        <input type="number" class="bill-input">
+      </div>
+      <div class="selectTipBox">
+        <p>Select Tip %</p>
+            <div class="percentage-box">
+              <button class="button" value="5">5%</button>
+              <button class="button" value="10">10%</button>
+              <button class="button" value="15">15%</button>
+              <button class="button" value="25">25%</button>
+              <button class="button" value="50">50%</button>
+              <input class="custom-button" type="number" placeholder="Custom" value="">
+            </div>
+      </div>
+      <div class="peopleBox">
+        <div class="message">
+          <p>Number of People</p>
+          <p class="red hidden">Can't be zero</p>
+        </div>
+        
+        <input type="number" class="people-input">
+      </div>
+    </div>
+    <div class="rightSide">
+      <div class="topBox">
+        <div>
+          <p class="tip-person">Tip Amount</p>
+          <p class="person">/ person</p>
+        </div>
+        <div class="tip-total">
+          <div class="dollar"></div>
+         <span>$</span><span id="result-tip">0.00</span>
+        </div>
+      </div>
+      <div class="middleBox">
+        <div>
+            <p class="tip-person">Total</p>
+            <p class="person">/ person</p>
+          </div>
+          <div class="tip-total">
+            <div class="dollar"></div>
+            <span>$</span><span id="result-total">0.00</span>
+          </div>
+      </div>
+      <button id="button-reset">Reset</button>
+    </div>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
