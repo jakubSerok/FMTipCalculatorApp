@@ -16,7 +16,7 @@
     <div class="leftSide">
       <div class="billBox">
         <p>Bill</p>
-        <input type="number" class="bill-input">
+        <input type="number" class="bill-input" placeholder="0">
       </div>
       <div class="selectTipBox">
         <p>Select Tip %</p>
@@ -35,17 +35,17 @@
           <p class="red hidden">Can't be zero</p>
         </div>
         
-        <input type="number" class="people-input">
+        <input type="number" class="people-input" placeholder="0">
       </div>
     </div>
     <div class="rightSide">
-      <div class="topBox">
+      <div class="tipBox">
+        <div class="topBox">
         <div>
           <p class="tip-person">Tip Amount</p>
           <p class="person">/ person</p>
         </div>
-        <div class="tip-total">
-          <div class="dollar"></div>
+        <div class="tip-total">          
          <span>$</span><span id="result-tip">0.00</span>
         </div>
       </div>
@@ -54,11 +54,12 @@
             <p class="tip-person">Total</p>
             <p class="person">/ person</p>
           </div>
-          <div class="tip-total">
-            <div class="dollar"></div>
+          <div class="tip-total">            
             <span>$</span><span id="result-total">0.00</span>
           </div>
       </div>
+      </div>
+      
       <button id="button-reset">Reset</button>
     </div>
   </div>

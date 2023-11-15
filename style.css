@@ -40,7 +40,7 @@ body {
 }
 .bill-input,.people-input{
     width: 100%;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
     background-color: hsl(189, 41%, 97%);
     padding: 5px 10px;
@@ -48,6 +48,10 @@ body {
     font-size: 16px;
     font-weight: bold;
     text-align: right;
+}
+.bill-input::placeholder,.people-input::placeholder{
+    color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
 }
 .bill-input{
     background-image: url("./images/icon-dollar.svg");
@@ -63,9 +67,7 @@ body {
     background-position-y: center;
     background-position-x: 15px;
 }
-.people-input .invalid{
-    border: 2px solid red;
-}
+
 .message{
     display: flex;
     justify-content: space-between;
@@ -77,6 +79,7 @@ body {
 .hidden{
     display: none;
 }
+
 input[type="number"]{
     border: none;    
 }
@@ -91,6 +94,9 @@ input[type="number"]::-webkit-outer-spin-button
  { 
   -webkit-appearance: none; 
 }
+input[type="number"].invalid{
+    border: 2px solid red;
+}
 .percentage-box{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -99,7 +105,7 @@ input[type="number"]::-webkit-outer-spin-button
     width: 100%;
 }
 .percentage-box button{
-    height: 30px;
+    height: 40px;
     width: 100%;
     font-size: 20px;
     color: white;
@@ -113,21 +119,79 @@ input[type="number"]::-webkit-outer-spin-button
     background-color: hsl(185, 41%, 84%);
     cursor: pointer;
 }
-.percentage-box button .active{
+.percentage-box button.active{
     background-color: hsl(172, 67%, 45%);
 }
 .percentage-box input{
-    height: 30px;
+    height: 40px;
     width: 100%;
     text-align: center;
-    font-size: 20px;
-    color: hsl(183, 100%, 15%);
+    font-size: 20px;    
     font-weight: bold;
+    color: hsl(183, 100%, 15%);
+}
+.percentage-box input::placeholder{
+    color: hsl(183, 100%, 15%);
 }
 .rightSide{
     width: 40%;
     height:100%;
     border-radius: 10px;
     background-color: hsl(183, 100%, 15%);
-}
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+}
+.topBox, .middleBox{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.tip-person{
+    color: white;
+    font-size: 15px;
+    
+}
+.person{
+    font-size: 12px;
+    color: hsl(184, 14%, 56%);
+}
+ .tip-total{
+    font-size: 3rem;
+    color: hsl(172, 67%, 45%);
+ }
+ #button-reset{
+    width: 100%;
+    height: 40px;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    align-items: center;
+    outline: none;
+    border: none;
+ }
+ #button-reset:hover{
+    background-color:hsl(185, 41%, 84%) ;
+ }
+ @media (max-width:768px){
+    .container{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        gap: 20px;
+    }
+    .leftSide{
+        width: 100%;
+    }
+    .rightSide{
+        width: 100%;
+    }
+ }
